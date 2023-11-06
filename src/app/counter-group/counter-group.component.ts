@@ -26,5 +26,7 @@ export class CounterGroupComponent {
   reset(){
     this.counters.map(a => a.num = 0)
   }
-
+  OnDelete(index: number) {
+    this.counters.splice(index, 1);
+  }
 }

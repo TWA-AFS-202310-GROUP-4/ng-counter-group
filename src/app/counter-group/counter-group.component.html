@@ -3,9 +3,11 @@
 </div>
 
 <app-counter 
-*ngFor="let counter of  counters"
+*ngFor="let counter of  counters; let i = index"
  [number]="counter.num"
+ [id] = "i"
 (change)="counter.num = $event"
+(delete)= "OnDelete($event)"
 >
 
 </app-counter>

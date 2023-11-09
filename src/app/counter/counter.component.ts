@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -6,13 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent {
-  number=0;
+  @Input() number=0;
+  @Output() numberChange = new EventEmitter();
 
   onIncrease() {
     this.number++;
+    this.numberChange.emit(this.number)
   }
 
   onDecrease() {
     this.number--;
+    this.numberChange.emit(this.number)
   }
 }

@@ -28,7 +28,6 @@ div:last-child {
   font-weight: bold;
 }
 
-/* Style for the individual app-counter components */
 app-counter {
   display: flex;
   justify-content: space-between;
@@ -39,16 +38,14 @@ app-counter {
   background-color: #f0f0f0;
 }
 
-/* Style for the number input within each app-counter component */
 app-counter input[type="number"] {
   width: 50px;
   padding: 5px;
   text-align: center;
 }
 
-/* Style for the "Remove" button within each app-counter component */
 app-counter button:contains('Remove') {
-  background-color: #FF0000; /* Red background for the "Remove" button */
+  background-color: #FF0000;
   color: #fff;
   border: none;
   cursor: pointer;

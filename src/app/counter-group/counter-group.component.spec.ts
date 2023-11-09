@@ -31,4 +31,9 @@ describe('CounterGroupComponent', () => {
     expect(component.counters[1].num).toBe(0)
     expect(component.counters[2].num).toBe(0)
   })
+
+  it ("should add a number from counters when call onAdd", () => {
+    component.onAdd()
+    expect(component.counters.length).toBe(4)
+  })
 });

@@ -24,4 +24,11 @@ describe('CounterGroupComponent', () => {
     component.removeACounter(2)
     expect(component.counters.length).toBe(2)
   })
+
+  it ("should reset all number to 0 when call resetAll funtion", () => {
+    component.resetAll();
+    expect(component.counters[0].num).toBe(0)
+    expect(component.counters[1].num).toBe(0)
+    expect(component.counters[2].num).toBe(0)
+  })
 });

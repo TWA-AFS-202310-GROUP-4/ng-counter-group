@@ -26,4 +26,8 @@ export class CounterGroupComponent {
   removeACounter(i: number) {
     this.counters.splice(i,1);
   }
+
+  resetAll() {
+    this.counters.forEach(e => e.num = 0)
+  }
 }

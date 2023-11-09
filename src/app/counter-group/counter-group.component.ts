@@ -19,4 +19,12 @@ export class CounterGroupComponent {
     )
   }
 
+  OnAdd(){
+    this.counters.push({num: 0})
+  }
+
+  reset(){
+    this.counters.map(a => a.num = 0)
+  }
+
 }

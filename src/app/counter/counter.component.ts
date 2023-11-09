@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -6,14 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent {
-  numberValue: number = 0;
+  @Input() numberValue: number = 0;
+  @Input() id! : number;
+  @Output() change = new EventEmitter();
+  @Output() onDelete: EventEmitter<any> = new EventEmitter();
 
   onIncrease() {
     this.numberValue ++;
+    this.change.emit(this.numberValue);
   }
 
   onDecrease() {
     this.numberValue --;
+    this.change.emit(this.numberValue);
   }
 
   get isShowDecreaseButton() {
@@ -32,5 +37,10 @@ export class CounterComponent {
 
   onReset() {
     this.numberValue = 0;
+    this.change.emit(this.numberValue);
+  }
+
+  delete() {
+    this.onDelete.emit(this.id);
   }
 }

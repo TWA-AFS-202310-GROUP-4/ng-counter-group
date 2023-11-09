@@ -1,4 +1,7 @@
-<button *ngIf="isShowDecreaseButton" (click)="onDecrease()">-</button>
-<span [style.background]="textBackgroundColor">Number: {{ numberValue }}</span>
-<button *ngIf="isShowIncreaseButton" (click)="onIncrease()">+</button>
-<button (click)="onReset()">reset</button>
+<div>
+    <button *ngIf="isShowDecreaseButton" (click)="onDecrease()">-</button>
+    <span [style.background]="textBackgroundColor">Number: {{ numberValue }}</span>
+    <button *ngIf="isShowIncreaseButton" (click)="onIncrease()">+</button>
+    <button (click)="onReset()">reset</button>
+    <button (click)="delete()">remove</button>
+</div>

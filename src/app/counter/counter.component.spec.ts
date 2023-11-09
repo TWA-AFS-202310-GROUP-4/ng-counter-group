@@ -30,4 +30,9 @@ describe('CounterComponent', () => {
     component.onDecrease();
     expect(component.numberValue).toEqual(0);
   });
+
+  it('should set numberValue to zero when call the onReset method', () => {
+    component.onReset();
+    expect(component.numberValue).toEqual(0);
+  });
 });

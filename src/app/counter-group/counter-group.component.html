@@ -3,7 +3,8 @@
     *ngFor="let counter of counters; index as i;"
     [number]="counter.num"
     (change)="counter.num = $event"
-    (remove)="removeACounter(i)">
+    (remove)="removeACounter(i)"
+    (reset) ="counter.num = $event">
 </app-counter>
 
 <div>

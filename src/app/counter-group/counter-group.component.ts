@@ -24,7 +24,7 @@ export class CounterGroupComponent {
     this.counters.splice(index,1)
   }
   onResetAll(){
-    this.counters.forEach(num1=>num1.num = 0)
+    this.counters.forEach(number=>number.num = 0)
   }
 }
 

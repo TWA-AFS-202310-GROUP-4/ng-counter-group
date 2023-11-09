@@ -8,7 +8,7 @@ describe('CounterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CounterComponent]
+      declarations: [CounterComponent],
     });
     fixture = TestBed.createComponent(CounterComponent);
     component = fixture.componentInstance;
@@ -19,19 +19,27 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should increase number when call onIncrease',()=>{
-    component.number=2
+  it('should increase number when call onIncrease', () => {
+    component.number = 2;
 
-    component.onIncrease()
+    component.onIncrease();
 
-    expect(component.number).toEqual(3)
-  })
+    expect(component.number).toEqual(3);
+  });
 
-  it('should decrease number when call onDecrease',()=>{
-    component.number=2
+  it('should decrease number when call onDecrease', () => {
+    component.number = 2;
 
-    component.onDecrease()
+    component.onDecrease();
 
-    expect(component.number).toEqual(1)
-  })
+    expect(component.number).toEqual(1);
+  });
+
+  it('should set number 0  when call reset', () => {
+    component.number = 2;
+
+    component.onDecrease();
+
+    expect(component.number).toEqual(1);
+  });
 });

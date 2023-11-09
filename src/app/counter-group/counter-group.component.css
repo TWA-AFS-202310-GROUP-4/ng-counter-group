@@ -1,0 +1,57 @@
+/* Style for the container div */
+div {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Style for the "Create Counter" button */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Style for the "Reset all" button */
+button:last-child {
+  background-color: #FF0000; /* Red background for the "Reset all" button */
+  margin-top: 10px;
+}
+
+/* Style for the Sum display */
+div:last-child {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+app-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f0;
+}
+
+app-counter input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+}
+
+app-counter button:contains('Remove') {
+  background-color: #FF0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.sum {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}

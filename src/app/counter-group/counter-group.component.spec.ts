@@ -19,4 +19,9 @@ describe('CounterGroupComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it ("should delete a number from counters when call removeAcounter", () => {
+    component.removeACounter(2)
+    expect(component.counters.length).toBe(2)
+  })
 });

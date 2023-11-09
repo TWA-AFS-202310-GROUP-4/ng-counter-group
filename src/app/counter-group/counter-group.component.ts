@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-counter-group',
   templateUrl: './counter-group.component.html',
   styleUrls: ['./counter-group.component.css']
 })
 export class CounterGroupComponent {
+
   counters: {num: number} [] = [
     {num: 1},
     {num: 2},
@@ -20,5 +21,9 @@ export class CounterGroupComponent {
 
   onAdd() {
     this.counters.push( {num: 0} )
+  }
+
+  removeACounter(i: number) {
+    this.counters.splice(i,1);
   }
 }

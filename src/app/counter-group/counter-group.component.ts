@@ -18,7 +18,11 @@ export class CounterGroupComponent {
     )
   }
 
-  onAdd(){
-    this.counters.push({num:0})
+  onAdd() {
+    this.counters.push({ num: 0 })
+  }
+
+  resetAllCounters() {
+    this.counters.map(item => item.num = 0)
   }
 }

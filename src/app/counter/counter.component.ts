@@ -7,10 +7,13 @@ import { Component, Input, Output , EventEmitter} from '@angular/core';
 })
 export class CounterComponent {
   @Input()
-  number: number = 0;
+  number: number = 0
 
   @Output()
-  numberChangeEvent = new EventEmitter();
+  numberChangeEvent = new EventEmitter()
+
+  @Output()
+  counterDeleteEvent = new EventEmitter()
 
   onDecreaseButtonClick() {
     this.number--;
@@ -20,5 +23,14 @@ export class CounterComponent {
   onIncreaseButtonClick() {
     this.number++;
     this.numberChangeEvent.emit(this.number);
+  }
+
+  onReset(){
+    this.number = 0;
+    this.numberChangeEvent.emit(this.number)
+  }
+
+  onDelete(){
+    this.counterDeleteEvent.emit()
   }
 }

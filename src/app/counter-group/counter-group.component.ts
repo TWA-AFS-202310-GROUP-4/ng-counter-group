@@ -18,11 +18,13 @@ export class CounterGroupComponent {
     }
 
   onAdd(){
-    this.counters.push({num:0});
+    this.counters.push({num:0})
   }
   onRemove(index: number){
-    this.counters.splice(index,1);
+    this.counters.splice(index,1)
   }
-
+  onResetAll(){
+    this.counters.forEach(num1=>num1.num = 0)
   }
+}
 

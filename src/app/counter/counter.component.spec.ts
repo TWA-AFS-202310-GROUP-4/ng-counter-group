@@ -32,14 +32,9 @@ describe('CounterComponent', () => {
     expect(component.number).toEqual(1);
   });
 
-  /*
-  it('should increase number when click increase button',()=>{
-    component.number = 2;
-    fixture.debugElement.query(By.css("button")).triggerEventHandler("click")
-    fixture.detectChanges()
+  it('should reset number to 0 when call onReset',() =>{
+    component.onReset()
+    expect(component.number).toEqual(0);
+  });
 
-    const text = fixture.debugElement.query(By.css("span")).nativeElement.textContext
-    expect(text).toEqual('number:3');
-  })
-*/
 });

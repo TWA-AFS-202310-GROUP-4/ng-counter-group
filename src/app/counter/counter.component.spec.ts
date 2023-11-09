@@ -19,5 +19,21 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  
+  it('should increase the number when call the Onincrease method',() => {
+
+    component.number = 2
+
+    component.onIncrease()
+
+    expect(component.number).toEqual(3)
+  });
+
+  it('should increase the number when call the Onincrease method',() => {
+
+    component.number = 2
+
+    component.ondecrease()
+
+    expect(component.number).toEqual(1)
+  })
 });
